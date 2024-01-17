@@ -1,0 +1,589 @@
+:root{
+    --neutral-100: #303030;
+    --neutral-00: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Onest', sans-serif;
+    background-color: #f7f7f7;
+    color: var(--neutral-100);
+}
+
+/* Navbar Section Start */
+.navbar {
+    margin: 1.5rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99999;
+}
+
+.navbar a{
+    color: var(--neutral-100);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.navbar .navbar-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navbar .navbar-nav a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4a4a4a;
+}
+
+.navbar .navbar-nav a:hover{
+    color: var(--neutral-100);
+}
+
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: .5rem;
+    border-bottom: .1rem solid var(--neutral-100);
+    transform: scaleX(0);
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(1);
+}
+
+.navbar .navbar-cta a{
+    padding: .75rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--neutral-100);
+}
+
+.navbar .navbar-cta a.primary-button{
+    padding: .75rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--neutral-00);
+    background-color: var(--neutral-100);
+    border-radius: .25rem;
+}
+/* Navbar Section End */
+
+/* Hero Section Start */
+.hero {
+    margin: 1.5rem 7% 5.5rem 7%;
+    height: 78vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero .hero-content{
+    width: 100%;
+    height: 46rem;
+    background-image: url(../img/hero-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--neutral-00);
+}
+
+.hero .hero-content h1{
+    width: 65.56rem;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 124.5%;
+    letter-spacing: .3px;
+    text-align: center;
+}
+
+.hero .hero-content p{
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    letter-spacing: .3px;
+}
+
+.hero .search-box{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--neutral-00);
+    border-radius: .5rem;
+    gap: 1.5rem;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .1);
+    position: relative;
+    top: -3rem;
+}
+
+.hero .search-box .box{
+    width: 13.94rem;
+    padding: .75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .search-box .tour{
+    flex-direction: column;
+    align-items: start;
+}
+
+.hero .search-box .box h5{
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .5px;
+    line-height: 14px;
+}
+
+.hero .search-box .box p{
+    margin-top: 1rem;
+    font-size: .88rem;
+    color: #999999;
+    letter-spacing: .5px;
+    line-height: 14px;
+}
+
+.hero .search-box .vertical-line{
+    width: 2px;
+    height: 3.56rem;
+    background-color: #f0f0f0;
+    float: left;
+}
+
+.hero .search-box .search-icon{
+    padding: .75rem;
+    border-radius: .5rem;
+    background-color: var(--neutral-100);
+}
+/* Hero Section End */
+
+/* Feautures Section Start */
+.feautures {
+    margin: 0 7% 5.5rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feautures .feautures-content{
+    margin-left: 5rem;
+}
+
+.feautures .feautures-content h1{
+    width: 38.13rem;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.feautures .feautures-content p{
+    margin: 1rem 0;
+    font-size: 1.25rem;
+    letter-spacing: 1%;
+}
+
+.feautures .feautures-content .feautures-list .list{
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    gap: 1.5rem;
+    border-radius: .5rem;
+    align-items: center;
+} 
+
+.feautures .feautures-content .feautures-list .list:hover {
+    background-color: var(--neutral-00);
+}
+
+.feautures .feautures-content .feautures-list .list img{
+    width: 3rem;
+    height: 3rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.bed:hover .bed-icon,
+.airplane:hover .airplane-icon,
+.wallet:hover .wallet-icon,
+.tent:hover .tent-icon{
+    background-color: #f4f7ff;
+}
+
+.feautures .feautures-content .feautures-list .list .list-content h3{
+    font-size: 1.25rem;
+    color: var(--neutral-100);
+}
+
+.feautures .feautures-content .feautures-list .list .list-content p{
+    margin-top: .5rem;
+    font-size: 1rem;
+    color: var(--neutral-100);
+}
+/* Feautures Section End */
+
+/* Top Offer Section Start */
+.top-offer {
+    margin: 5.5rem 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.top-offer .top-offer-desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5.88rem;
+}
+
+.top-offer .top-offer-desc h1{
+    width: 38.13rem;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.top-offer .top-offer-desc p{
+    width: 33.5rem;
+    letter-spacing: 1%;
+}
+
+.top-offer .top-offer-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1.25rem;
+}
+
+.top-offer .top-offer-container .top-offer-content {
+    position: relative;
+}
+
+.top-offer .top-offer-container .top-offer-content img{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.top-offer .top-offer-container .top-offer-content .top-offer-price{
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--neutral-00);
+    padding: 1.25rem 1.5rem;
+    transition: .5s linear;
+    opacity: 0;
+}
+
+.top-offer .top-offer-container .top-offer-content .overlay {
+    position: absolute;
+    height: 98%;
+    width: 17.31rem;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #303030 15%, rgba(48, 48, 48, 0) 100%);
+    border-radius: 1rem;
+    transition: .3s linear;
+    opacity: 0;
+}
+
+.borobudur:hover #borobudur,
+.lempuyang-temple:hover #lempuyang,
+.nusa-penida:hover #nusa-penida,
+.komodo-island:hover #komodo-island{
+    opacity: 100%;
+}
+
+.top-offer .top-offer-container .top-offer-content .top-offer-price p{
+    color: var(--neutral-100);
+    padding: .5rem .75rem;
+    border-radius: .25rem;
+    background-color: var(--neutral-00);
+}
+
+.top-offer .top-offer-container .top-offer-content .top-offer-price .destination h3{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.top-offer .top-offer-container .top-offer-content .top-offer-price .destination p{
+    font-size: 1rem;
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--neutral-00);
+}
+/* Top Offer Section End */
+
+/* Popular Destination Start */
+.popular-destination {
+    margin: 5.5rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular-destination .popular-content{
+    width: 38.81rem;
+}
+
+.popular-destination .popular-content h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.popular-destination .popular-content h1{
+    margin-top: .5rem;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.popular-destination .popular-content p{
+    margin-top: .75rem;
+    font-size: 1rem;
+    line-height: 120%;
+    letter-spacing: 1%;
+}
+
+.popular-destination .popular-content a{
+    margin-top: 1.25rem;
+    width: fit-content;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: .5rem;
+    color: var(--neutral-100);
+    font-weight: 500;
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    border: 1px solid var(--neutral-100);
+}
+
+.popular-destination .popular-content a p{
+    padding: 0;
+    margin: 0;
+}
+/* Popular Destination End */
+
+/* Testimonial Section Star */
+.testimonial {
+    margin: 5.5rem 7%;
+}
+
+.testimonial h1 {
+    width: 17.19rem;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.testimonial .testimonial-content{
+    margin: 1rem 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.testimonial .testimonial-content .profile-container{
+    width: 20rem;
+    padding: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.testimonial .testimonial-content .profile-container .user-profile img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial .testimonial-content .profile-container .name-job{
+    width: 11rem;
+}
+
+.testimonial .testimonial-content .profile-container .name-job h3{
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.testimonial .testimonial-content .user-comment{
+    width: 51.25rem;
+    height: auto;
+    font-size: 1rem;
+    line-height: 132%;
+    letter-spacing: 1px;
+}
+
+.testimonial .testimonial-content .profile-container .button #prev,
+.testimonial .testimonial-content .profile-container .button #next{
+    padding: .5rem;
+    border-radius: 50%;
+    background-color: transparent;
+}
+/* Testimonial Section End */
+
+/* Cta Section Start */
+.cta {
+    margin: 5.5rem 7%;
+    height: 26rem;
+    width: 86%;
+    border-radius: 1rem;
+    background-image: url(../img/cta.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.cta h1{
+    width: 63.38rem;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 120%;
+    letter-spacing: 2px;
+    color: var(--neutral-00);
+    text-align: center;
+}
+
+.cta a{
+    padding: .75rem 1rem;
+    border-radius: .5rem;
+    background-color: var(--neutral-00);
+    color: var(--neutral-100);
+    font-weight: 500;
+}
+/* Cta Section End */
+
+/* Footer Section Start */
+footer {
+    margin: 5.5rem 7% 0 7%;
+}
+
+footer a{
+    color: var(--neutral-100);
+}
+
+footer .main-content{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+footer .main-content .left-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer .main-content .left-content h1{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+footer .main-content .left-content .contact{
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+footer .main-content .left-content .contact a{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+footer .main-content .left-content .our-sosmed h1{
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+footer .main-content .left-content .our-sosmed .sosmed{
+    margin-top: .5rem;
+    gap: .75rem;
+}
+
+footer .main-content .right-content{
+    display: flex;
+    align-items: flex-start;
+    gap: 8rem;
+}
+
+footer .main-content .right-content .information,
+footer .main-content .right-content .our-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer .main-content .right-content .information h3,
+footer .main-content .right-content .our-menu h3{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+footer .main-content .right-content .information .detail-info,
+footer .main-content .right-content .our-menu .detail-menu {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+}
+
+footer .copyright{
+    margin-top: 2.5rem;
+    padding: .75rem 0;
+    border-top: 1px solid var(--neutral-100);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .copyright .right-info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .copyright .right-info .vertical-line{
+    height: 1.25rem;
+    width: 1px;
+    background-color: var(--neutral-100);
+    border-radius: 50%;
+}
+
+/* Footer Section End */
